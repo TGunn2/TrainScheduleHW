@@ -154,10 +154,10 @@
             // To calculate the months worked
             // Change the HTML to reflect
             const now = moment(); 
-            const initialTime = moment(Start, "HH:mm").subtract(1, "year"); 
+            const initialTime = moment(Start, "HH:mm a").subtract(1, "year"); 
             const totalAmountOfMin = now.diff(initialTime, "min")
             const minsAway = parseInt(Frequency) - (totalAmountOfMin % parseInt(Frequency))
-            const leavingTime = moment().add(minsAway, "minutes").format("HH:mm")
+            const leavingTime = moment().add(minsAway, "minutes").format("HH:mm a")
 
 
             $tr = $('<tr>');
